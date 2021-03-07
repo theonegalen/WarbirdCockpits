@@ -1,0 +1,130 @@
+@PROP[PullStick_WB_Plane_Abort]:NEEDS[MECHJEB]
+{
+
+// switcher input ---------------------------------------------------------------------
+
+	MODULE
+	{
+		name = JSIActionGroupSwitch
+		switchTransform = Grab
+		actionName = abort
+		momentarySwitch = true
+		masterVariableName = PERSISTENT_WARBIRD_ABORT_MODE_SELECT
+		masterVariableRange = -0.5,0.5
+	}
+
+// set persistent  
+
+	MODULE
+	{
+		name = JSIActionGroupSwitch
+		switchTransform = Grab
+		actionName = dummy
+		perPodPersistenceName = ASET_ABORT_INIT
+		switchSound =  Galen/WarbirdCockpits/Sounds/brakepullstick
+	}	
+	
+	MODULE
+	{
+		name = JSIActionGroupSwitch
+		switchTransform = Grab
+		actionName = dummy
+		masterVariableName = WARBIRD_ABORT_TO_LAND_AVAILABLE
+		masterVariableRange = 0.5,1.5
+
+	}	
+	
+	MODULE
+	{
+		name = JSIActionGroupSwitch
+		switchTransform = Grab
+		actionName = dummy
+		masterVariableName = WARBIRD_ABORT_TO_ORBIT_AVAILABLE
+		masterVariableRange = 0.5,1.5
+
+	}	
+	
+	MODULE
+	{
+		name = JSIActionGroupSwitch
+		switchTransform = Grab
+		masterVariableName = CUSTOM_WARBIRD_DOCKING_ABORT_AVAILABLE
+		masterVariableRange = 0.5,1.5
+		perPodPersistenceName = WARBIRD_ABORT_DOCKING_INIT
+		actionName = plugin
+		
+		PLUGINACTION
+		{
+			name =  JSIInternalRPMButtons
+			actionMethod = ButtonSASModeAntiTarget
+			stateVariable = 1
+		}
+	}
+	
+	MODULE
+	{
+		name = JSIActionGroupSwitch
+		switchTransform = Grab
+		masterVariableName = CUSTOM_WARBIRD_DOCKING_ABORT_AVAILABLE
+		masterVariableRange = 0.5,1.5
+		actionName = plugin
+		
+		PLUGINACTION
+		{
+			name =  JSIInternalRPMButtons
+			actionMethod = ButtonEnableEngines
+			stateVariable = 1
+		}
+	}
+	
+	MODULE
+	{
+		name = JSIActionGroupSwitch
+		switchTransform = Grab
+		masterVariableName = CUSTOM_WARBIRD_DOCKING_ABORT_AVAILABLE
+		masterVariableRange = 0.5,1.5
+		actionName = plugin
+		
+		PLUGINACTION
+		{
+			name =  JSIInternalRPMButtons
+			actionMethod = ButtonFullThrottle 
+			stateVariable = 1
+		}
+	}
+	
+	MODULE
+	{
+		name = JSIActionGroupSwitch
+		switchTransform = Grab
+		masterVariableName = CUSTOM_WARBIRD_DOCKING_ABORT_AVAILABLE
+		masterVariableRange = 0.5,1.5
+		actionName = transfer
+		momentarySwitch = true
+				
+		TRANSFERACTION
+		{
+			name = JSIInternalRPMButtons
+			setMethod = SetThrottleLimit 
+			getVariable = 100
+		}
+	}
+
+// Pull Handle Animation -------------------------------------------------------------------------------	
+	
+	MODULE
+	{
+		name = JSIVariableAnimator
+		refreshRate = 1		
+		
+		VARIABLESET	
+		{	
+			controlledTransform  = PullHandle
+			localTranslationStart = 0,0,0 
+			localTranslationEnd  = 0,0,0.1
+			variableName = PERSISTENT_ASET_ABORT_INIT
+			scale = 0,1
+			maxRateChange = 2
+		}
+	}	
+}

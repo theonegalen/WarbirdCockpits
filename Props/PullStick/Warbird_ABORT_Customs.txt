@@ -1,0 +1,113 @@
+RPM_CUSTOM_VARIABLE
+	{
+		name = WARBIRD_RTLS_ON
+		operator = OR
+
+		SOURCE_VARIABLE
+			{
+				name = TWRMAX
+				range = 0, 1.5
+			}
+			
+		SOURCE_VARIABLE
+			{
+				name = ATMOSPHEREDEPTH
+				range = 0.5,2
+			}
+			
+		SOURCE_VARIABLE
+			{
+				name = DELTAV
+				range = 0, 2500
+			}
+	}
+
+RPM_CUSTOM_VARIABLE
+	{
+		name = WARBIRD_ABORT_RTLS_AVAILABLE
+		operator = AND
+
+		SOURCE_VARIABLE
+			{
+				name = PERSISTENT_WARBIRD_ABORT_MODE_SELECT
+				range = 0.5,1.5
+			}
+		
+		SOURCE_VARIABLE
+			{
+				name = CUSTOM_WARBIRD_RTLS_ON
+				range = 0.5,1.5
+			}
+			
+		SOURCE_VARIABLE
+			{
+				name = CUSTOM_WARBIRD_RTLS_ON
+				range = 0.5,1.5
+			}
+	}
+	
+RPM_CUSTOM_VARIABLE
+	{
+		name = WARBIRD_ABORT_TO_ORBIT_AVAILABLE
+		operator = AND
+
+		SOURCE_VARIABLE
+			{
+				name = PERSISTENT_WARBIRD_ABORT_MODE_SELECT
+				range = 1.5,2.5
+			}
+			
+		SOURCE_VARIABLE
+			{
+				name = TWRMAX
+				range = 1.5,10000
+			}
+			
+		SOURCE_VARIABLE
+			{
+				name = ATMOSPHEREDEPTH
+				range = 0.001,0.5
+			}
+			
+		SOURCE_VARIABLE
+			{
+				name = DELTAV
+				range = 2500,10000000
+			}
+	}
+
+RPM_CUSTOM_VARIABLE
+	{
+	  name = WARBIRD_DOCKING_ABORT_AVAILABLE
+	  operator = AND
+	
+	  SOURCE_VARIABLE
+	  {
+		name = PERSISTENT_WARBIRD_ABORT_MODE_SELECT
+		range = 2.5,3.5
+	  }
+	
+	SOURCE_VARIABLE
+	  {
+		name = CUSTOM_WARBIRD_APPROACH_ON
+		range = 0.1, 1.1
+	  }
+	}
+
+RPM_CUSTOM_VARIABLE
+	{
+	  name = WARBIRD_MULTIMODE_DOCKING_ABORT
+	  operator = AND
+	
+	  SOURCE_VARIABLE
+	  {
+		name = 
+		range = 2.5,3.5
+	  }
+	
+	SOURCE_VARIABLE
+	  {
+		name = WARBIRD_DOCKING_ABORT_AVAILABLE
+		range = 0.5, 1.5
+	  }
+	}

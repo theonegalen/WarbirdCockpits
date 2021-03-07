@@ -1,0 +1,12 @@
+//To use the cockpits with SI measurements (speed in m/s, altitude and distance in m), rename this to WarbirdSI.cfg!
+
+@PART[RetroMk1Inline]:NEEDS[ASETPropsIdentifier&WarbirdCockpits]:FOR[WarbirdSI]
+	{
+		@description = A cockpit from the early days of aviation, when engines were basically fans driven by hundreds of tiny explosions. Minimally pressurized and without all that heavy heat shielding. Warranty void if exposed to vacuum, high temperatures or used for any sort of lithobreaking. Instruments now in SI measurements!
+	}
+	
+@PART[KN2CabinAnalog]:NEEDS[ASETPropsIdentifier&WarbirdCockpits]:FOR[WarbirdSI]
+	{
+		@description = A classic of early Kerbin aviation technology, the Kn-2 cockpit module seats up to 3 Kerbals in conditions described in Kerbonov advertising copy as "cozy". Instruments now in SI measurements!
+
+	}

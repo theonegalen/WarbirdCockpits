@@ -1,0 +1,19 @@
+Warbird_ENGINE_TempGauge -> WC-MAS_TempGauge-Engine-Piston
+Warbird_LG_Lever -> WC-MAS_LG_Lever-Fighter
+ASET_FlapsIndicator -> MAS_ASET_FlapsIndicator
+ASET_TurnCoordinator -> MAS_ASET_TurnCoordinator
+ASET_ClockTimer_WB -> MAS_ASET_ClockTimer
+Warbird_BatteryGauge -> MAS_ASET_BatteryGauge
+Warbird_FuelQTY_Digital -> MAS_ASET_FuelQTY_Digital
+ASET_Elec_Output_WB -> MAS_ASET_Elec_Output
+Warbird_AHI -> WC-MAS_AHI-Black
+ASET_TrimIndicator -> MAS_ASET_TrimIndicator
+Warbird_G-METER -> WC-MAS_G-METER_Full
+ASET_Altimeter_WB -> MAS_ASET_Altimeter
+ASET_ASI_WB -> MAS_ASET_ASI
+ASET_VSI_WB -> MAS_ASET_VSI
+
+
+
+-------------------------------
+

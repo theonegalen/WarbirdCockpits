@@ -7,7 +7,7 @@ Warbird_BatteryGauge -> MAS_ASET_BatteryGauge
 Warbird_FuelQTY_Digital -> MAS_ASET_FuelQTY_Digital
 ASET_Elec_Output_WB -> MAS_ASET_Elec_Output
 Warbird_AHI -> WC-MAS_AHI-Black
-ASET_TrimIndicator -> MAS_ASET_TrimIndicator
+ASET_TrimIndicator_WB -> MAS_ASET_TrimIndicator
 Warbird_G-METER -> WC-MAS_G-METER_Full
 ASET_Altimeter_WB -> MAS_ASET_Altimeter
 ASET_ASI_WB -> MAS_ASET_ASI

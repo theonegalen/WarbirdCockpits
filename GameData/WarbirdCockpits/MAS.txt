@@ -12,7 +12,7 @@ Warbird_G-METER -> WC-MAS_G-METER_Full
 ASET_Altimeter_WB -> MAS_ASET_Altimeter
 ASET_ASI_WB -> MAS_ASET_ASI
 ASET_VSI_WB -> MAS_ASET_VSI
-
+ASET_RMI_WB -> Warbird_RMI
 
 
 -------------------------------

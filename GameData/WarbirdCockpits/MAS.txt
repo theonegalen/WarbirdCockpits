@@ -1,19 +1,31 @@
+----- done -----
+
 Warbird_ENGINE_TempGauge -> WC-MAS_TempGauge-Engine-Piston
 Warbird_LG_Lever -> WC-MAS_LG_Lever-Fighter
-ASET_FlapsIndicator -> MAS_ASET_FlapsIndicator
-ASET_TurnCoordinator -> MAS_ASET_TurnCoordinator
+ASET_FlapsIndicator_WB -> MAS_ASET_FlapsIndicator (not WB)
+ASET_TurnCoordinator_WB -> MAS_ASET_TurnCoordinator (not WB)
 ASET_ClockTimer_WB -> MAS_ASET_ClockTimer
 Warbird_BatteryGauge -> MAS_ASET_BatteryGauge
-Warbird_FuelQTY_Digital -> MAS_ASET_FuelQTY_Digital
-ASET_Elec_Output_WB -> MAS_ASET_Elec_Output
+Warbird_FuelQTY_Digital -> MAS_ASET_FuelQTY_Digital (not wb)
+ASET_Elec_Output_WB -> MAS_ASET_Elec_Output (not WB)
 Warbird_AHI -> WC-MAS_AHI-Black
 ASET_TrimIndicator_WB -> MAS_ASET_TrimIndicator
 Warbird_G-METER -> WC-MAS_G-METER_Full
-ASET_Altimeter_WB -> MAS_ASET_Altimeter
+ASET_Altimeter_WB -> MAS_ASET_ALTIMETER (not wb)
 ASET_ASI_WB -> MAS_ASET_ASI
 ASET_VSI_WB -> MAS_ASET_VSI
+ASET_SpoilersLever_WB -> MAS_ASET_SpoilersLever (not WB)
+ASET_FlapsCtrl_WB
+ASET_B_Compass_WB
+
+----- todo -----
+
+
 ASET_RMI_WB -> Warbird_RMI
 
 
 -------------------------------
 
+
+note: Warbird_LG_Lever has 170 MPH while WC-MAS_LG_Lever-Fighter has 100 m/s on it
+ASET_RMI_WB doesn't seem to have a direct MAS equivalent
